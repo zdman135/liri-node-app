@@ -28,13 +28,19 @@ function executeCommand(command) {
         getBandInfo(queryName);
     }
     this['spotify-this-song'] = function() {
-        checkIfAdditionalArgsPresent(userInput);
-        spotifyTheSong(queryName);
+        if (queryName == "") {
+            spotifyTheSong()
+        } else {
+            spotifyTheSong(queryName);
+        }
     }
   
     this['movie-this'] = function() {
-        checkIfAdditionalArgsPresent(userInput);
-        searchMovie(queryName);
+        if (queryName == "") {
+            searchMovie()
+        } else {
+            searchMovie(queryName);
+        }        
     }
 
     this['do-what-it-says'] = function() {
@@ -91,7 +97,7 @@ function getBandInfo(artist) {
         });
 }    
 
-function spotifyTheSong(songName) {
+function spotifyTheSong(songName="The Sign") {
     spotify.search({ type: 'track', query: songName }, function(err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
@@ -121,7 +127,7 @@ function spotifyTheSong(songName) {
     });
 }
 
-function searchMovie(movieName) {
+function searchMovie(movieName="Mr. Nobody") {
     axios.get('http://www.omdbapi.com', {
         params: {
           apikey: 'trilogy',
