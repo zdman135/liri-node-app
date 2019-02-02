@@ -32,4 +32,5 @@ You can edit this file to your liking
 
 ### Additional Notes:
 
-For a video tutorial of the application please, try the links below:
+For a video tutorial of the application please, try the link below:
+https://youtu.be/BQ64yTZjKIQ
