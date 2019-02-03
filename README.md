@@ -53,4 +53,4 @@ For a video tutorial of the application please, try the link below:
 ![alt text](images/spotify-this-empty.png "spotify-this-song empty")
 
 1. movie-this
-![alt text](images/movie-this-empty-.png "movie-this empty")
+![alt text](images/movie-this-empty.png "movie-this empty")
